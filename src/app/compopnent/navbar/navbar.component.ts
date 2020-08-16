@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
+  search: string = ""
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+
+  async buscar(busqueda: string) {
+    try {
+      console.log(busqueda)
+    }
+    catch (err) {
+
+    }
   }
 
 }

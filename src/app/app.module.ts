@@ -6,6 +6,10 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { NavbarComponent } from './compopnent/navbar/navbar.component';
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+
+import { MaterialModule } from 'src/app/material.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,7 +18,10 @@ import { NavbarComponent } from './compopnent/navbar/navbar.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MaterialModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
