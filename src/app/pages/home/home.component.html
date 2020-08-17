@@ -1,1 +1,46 @@
-<p>home works!</p>
+<div class="toolbar" role="banner">
+
+
+    <img width="150" class="imagen" src="../assets/svg/logo.svg" alt="Home" /><br />
+
+    <form (submit)="buscar(busqueda.value)">
+
+        <div class="box">
+            <div class="buscador">
+                <span class="icon"><i class="fa fa-search"></i></span>
+                <input type="search" id="search" placeholder="¿Qué estás buscando?" #busqueda />
+            </div>
+        </div>
+
+    </form>
+
+</div>
+
+<div class="contenido">
+
+    <div class="row listaProductos">
+        <div class="col-3" *ngFor="let pedido of productos">
+            <div class="producto">
+                <div class="img">
+                    <img src="https://{{pedido.image}}" class="w150">
+                   
+                </div>
+                <div class="detalleProducto">
+
+                    <div class="descripcion">
+                        {{pedido.brand}} {{pedido.description}} <br><br>
+                        $ {{pedido.price | number}}
+                    </div>
+                    <div class="agregar">
+                        <button class="btn" mat-stroked-button color="primary">Agregar</button>
+                    </div>
+
+                </div>
+                
+            </div>
+        </div>
+    </div>
+        
+    
+
+</div>
