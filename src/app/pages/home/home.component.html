@@ -19,7 +19,7 @@
 <div class="contenido">
 
     <div class="row listaProductos">
-        <div class="col-3" *ngFor="let pedido of productos">
+        <div class="col-12 col-lg-3 col-xl-2 col-md-4 col-sm-6" *ngFor="let pedido of productos">
             <div class="producto">
                 <div class="img">
                     <img src="https://{{pedido.image}}" class="w150">
@@ -29,6 +29,7 @@
 
                     <div class="descripcion">
                         {{pedido.brand}} {{pedido.description}} <br><br>
+                        <span  *ngIf="pedido.descuento" class="oferta">Oferta</span><br>
                         $ {{pedido.price | number}}
                     </div>
                     <div class="agregar">
