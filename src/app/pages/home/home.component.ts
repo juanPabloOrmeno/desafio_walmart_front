@@ -8,7 +8,7 @@ import { ProductosSwService } from 'src/app/services/productos-sw.service';
 })
 export class HomeComponent implements OnInit {
 
-  productos: any
+  productos: {}
 
   constructor(private productosService: ProductosSwService) { }
 
@@ -17,26 +17,17 @@ export class HomeComponent implements OnInit {
   }
 
 
-
-
   async buscar(busqueda: string) {
     try {
-      console.log(busqueda)
-
-      let datos = { 
-        producto: busqueda, 
+      let datos = {
+        producto: busqueda,
       }
-      
-     let resp = await this.productosService.obtenerProductos(datos)
-     this.productos = resp['response']
 
-
-     console.log(this.productos)
-
+      let resp = await this.productosService.obtenerProductos(datos)
+      this.productos = resp.response
     }
     catch (err) {
-
+      console.log(err)
     }
   }
-
 }
