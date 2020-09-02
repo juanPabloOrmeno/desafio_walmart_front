@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  basePath: 'http://localhost:5000',
+  basePath: 'https://walmart-prueba.herokuapp.com' || 'http://localhost:5000',
 };
